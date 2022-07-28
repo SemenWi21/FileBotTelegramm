@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding("UTF-8")
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'org.telegram:telegrambots-meta:6.0.1'
+    implementation 'org.telegram:telegrambots:6.0.1'
+    implementation 'com.vdurmont:emoji-java:5.1.1'
+    implementation 'org.json:json:20220320'
+
+}
+
+test {
+    useJUnitPlatform()
+}
